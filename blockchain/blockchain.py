@@ -12,8 +12,6 @@ class BlockchainService:
     @rpc
     def create_new_block(self, data):
 
-
-
         return "Hello World !"
 
     @rpc
