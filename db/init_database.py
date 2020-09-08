@@ -1,6 +1,7 @@
 import pymongo
 import hashlib
 import datetime 
+import json
 
 
 class Block(object): 
@@ -88,4 +89,8 @@ for i in last_rec :
 
 # get last hash of chain with : data[0]['prev_hash']
 print("last hash : ", data[0]['prev_hash'])
+
+
+for document in collection.find():
+    print(json.dumps({'index':document['index'], 'data':document['data']}))
 """

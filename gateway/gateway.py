@@ -16,19 +16,14 @@ class GatewayService:
         index = self.mongo_rpc.get_prev_index() + 1
         timestamp = datetime.datetime.now()
 
-        sha = hashlib.sha256()
-        sha.update(
-            str(index).encode('utf-8')
-            + str(timestamp).encode('utf-8')
-            + str(data).encode('utf-8')
-            + str(prev_hash).encode('utf-8')
-        )
-        block_hash = sha.hexdigest()
+        new_block = self.blockchain_rpc.create_new_block(index, timestamp, data, prev_hash)
 
-        self.mongo_rpc.insert_to_db({'index': index,
-                                     'timestamp': timestamp,
-                                     'data': data,
-                                     'prev_hash': prev_hash,
-                                     'hash': block_hash})
+        self.mongo_rpc.insert_to_db(new_block)
+        
         return "data inserted to DB."
+
+    @rpc
+    def get_blockchain(self):
+        blockchain = self.mongo_rpc.get_all()
+        return blockchain
 

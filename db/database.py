@@ -40,3 +40,14 @@ class MongoService:
         except : 
             print("The format is unexpected.")
 
+    @rpc
+    def get_all(self):
+        data = []
+        for document in self.collection.find():
+            data.append({'index': document['index'],
+                         'timestamp': document['timestamp'],
+                         'data': document['data'],
+                         'prev_hash': document['prev_hash'],
+                         'hash': document['hash']})
+
+        return data
