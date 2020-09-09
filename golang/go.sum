@@ -1,0 +1,4 @@
+github.com/jroimartin/rpcmq v0.0.0-20160913222444-8a85d2b280ef h1:IOZ0jeq8kU38uZjhe+tngzFjpef9FQaXUzruF9+QwVA=
+github.com/jroimartin/rpcmq v0.0.0-20160913222444-8a85d2b280ef/go.mod h1:uW4oMKg24dJ/0sTzXOoA4HQamkBaXA/SXHXQ5c74fAY=
+github.com/streadway/amqp v1.0.0 h1:kuuDrUJFZL1QYL9hUNuCxNObNzB0bV/ZG5jV3RWAQgo=
+github.com/streadway/amqp v1.0.0/go.mod h1:AZpEONHx3DKn8O/DFsRAY58/XVQiIPMTMB1SddzLXVw=

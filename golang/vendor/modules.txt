@@ -1,0 +1,6 @@
+# github.com/jroimartin/rpcmq v0.0.0-20160913222444-8a85d2b280ef
+## explicit
+github.com/jroimartin/rpcmq
+# github.com/streadway/amqp v1.0.0
+## explicit
+github.com/streadway/amqp
