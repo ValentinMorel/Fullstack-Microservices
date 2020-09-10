@@ -22,8 +22,8 @@ class GatewayService:
         
         return "data inserted to DB."
 
-    @rpc
-    def get_blockchain(self):
+    @http('GET', '/getblockchain')
+    def get_blockchain(self, request):
         blockchain = self.mongo_rpc.get_all()
         return blockchain
 

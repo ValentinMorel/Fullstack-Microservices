@@ -1,6 +1,5 @@
 import uuid
 from nameko.rpc import rpc, RpcProxy
-from nameko_redis import Redis
 import hashlib
 import json
 
